@@ -1,0 +1,525 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  height: 100%;
+  width: 100%;
+}
+
+.main {
+  width: 100%;
+  height: 100vh;
+  color: white;
+  background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url(banner.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+.main nav {
+  z-index: 999;
+  position: fixed;
+  padding-top: 1em;
+  width: 100%;
+  align-items: center;
+  background-color: transparent;
+  padding-top: 1rem;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.main nav .logo {
+  width: 50%;
+}
+.main nav .logo img {
+  width: 100%;
+  aspect-ratio: 1/0.2;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.main nav ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+  list-style-type: none;
+  display: none;
+}
+.main nav ul a {
+  text-decoration: none;
+  color: white;
+}
+.main nav .sidebar {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  display: none;
+  list-style: none;
+  top: 0%;
+  gap: 2em;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 2em;
+  right: 0%;
+  flex-direction: column;
+  background-color: rgba(255, 255, 255, 0.384);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+}
+.main nav .sidebar a {
+  font-size: 2em;
+}
+.main nav .sidebar i {
+  font-size: 2em;
+}
+.main nav .menu {
+  display: initial;
+  position: fixed;
+  right: 4%;
+  list-style: none;
+}
+.main nav .menu i {
+  font-size: 2em;
+}
+.main .head {
+  position: absolute;
+  top: 50%;
+  text-align: center;
+  display: flex;
+  gap: 2rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.main .head h1 {
+  font-size: 1.5em;
+}
+.main .head p {
+  font-size: 1em;
+  line-height: 1.5em;
+}
+.main .head a {
+  border: 2px solid white;
+  padding: 1em 2em;
+  font-size: 1em;
+  border-radius: 1em;
+  transition: cubic-bezier(0.19, 1, 0.22, 1);
+  text-decoration: none;
+  color: white;
+}
+.main .head a:hover {
+  border: 1px solid #f44336;
+  background: #f44336;
+  transition: 1s;
+}
+
+.course {
+  padding: 3rem;
+  text-align: center;
+}
+.course h1 {
+  font-size: 2.3em;
+}
+.course p {
+  padding-top: 1em;
+  opacity: 0.5;
+  font-size: 1.1em;
+}
+.course .course-item .container {
+  border-radius: 1em;
+  background-color: #fff3f3;
+  text-align: center;
+  padding: 2em;
+  margin-top: 2em;
+  transition: cubic-bezier(0.19, 1, 0.22, 1);
+}
+.course .course-item .container h1 {
+  font-size: 1.5em;
+}
+.course .course-item .container p {
+  padding-top: 1em;
+  opacity: 0.5;
+  font-size: 1.1em;
+}
+.course .course-item .container:hover {
+  box-shadow: 0 0 50px 20px rgba(0, 0, 0, 0.2);
+}
+
+.campus {
+  padding: 2em;
+  width: 100%;
+  text-align: center;
+}
+.campus h1 {
+  font-size: 2.1em;
+}
+.campus p {
+  margin-top: 1em;
+  font-size: 1.2em;
+  opacity: 0.7;
+}
+.campus .campus-line .campus-info {
+  margin-top: 4em;
+  width: 100%;
+  position: relative;
+}
+.campus .campus-line .campus-info .campus-pic {
+  width: 100%;
+}
+.campus .campus-line .campus-info .campus-pic img {
+  border-radius: 2em;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  overflow: hidden;
+}
+.campus .campus-line .campus-info .color {
+  border-radius: 1.4em;
+  width: 100%;
+  aspect-ratio: 1/0.68;
+  bottom: 0;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  transition: all 0.6s ease 0s;
+}
+.campus .campus-line .campus-info .color h1 {
+  opacity: 0;
+}
+.campus .campus-line .campus-info .color:hover {
+  background-color: rgba(255, 0, 0, 0.6);
+  font-size: 1.5rem;
+}
+.campus .campus-line .campus-info .color:hover h1 {
+  opacity: 1;
+}
+
+.faculity {
+  padding: 2em;
+  width: 100%;
+  text-align: center;
+}
+.faculity h1 {
+  font-size: 2.1em;
+}
+.faculity p {
+  margin-top: 1em;
+  font-size: 1.2em;
+  opacity: 0.7;
+}
+.faculity .faculity-line {
+  text-align: left;
+}
+.faculity .faculity-line .faculity-info {
+  margin-top: 1.5em;
+  width: 100%;
+}
+.faculity .faculity-line .faculity-info .faculity-pic {
+  width: 100%;
+}
+.faculity .faculity-line .faculity-info .faculity-pic img {
+  border-radius: 2em;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  overflow: hidden;
+}
+.faculity .faculity-line .faculity-info .info {
+  margin-top: 1em;
+}
+.faculity .faculity-line .faculity-info .info h1 {
+  font-size: 1.5em;
+}
+.faculity .faculity-line .faculity-info .info p {
+  opacity: 0.7;
+}
+
+.review {
+  width: 100%;
+  padding: 2em;
+  text-align: center;
+}
+.review h1 {
+  font-size: 2em;
+}
+.review p {
+  opacity: 0.7;
+}
+.review .review-col .review-info {
+  border-radius: 1em;
+  background-color: #fff3f3;
+  padding: 2em;
+  width: 100%;
+  display: flex;
+  margin-top: 3em;
+  gap: 2em;
+  transition: cubic-bezier(0.19, 1, 0.22, 1);
+}
+.review .review-col .review-info .image {
+  width: 100%;
+}
+.review .review-col .review-info .image img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50%;
+}
+.review .review-col .review-info .image-info {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+.review .review-col .review-info .image-info p {
+  font-size: 1em;
+  opacity: 0.7;
+}
+.review .review-col .review-info:hover {
+  box-shadow: 0 0 50px 20px rgba(0, 0, 0, 0.2);
+}
+
+.enroll {
+  margin: 4em 0;
+  padding: 2em;
+}
+.enroll .box {
+  border-radius: 1.5em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2em;
+  text-align: center;
+  padding: 5em 1em;
+  color: white;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("background.jpg");
+  background-position: center;
+}
+.enroll a {
+  text-decoration: none;
+  color: white;
+  border: 2px solid white;
+  padding: 1em 2em;
+  transition: cubic-bezier(0.19, 1, 0.22, 1);
+}
+.enroll a:hover {
+  border: 1px solid #f44336;
+  background: #f44336;
+  transition: 1s;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 2em;
+  padding: 2em;
+}
+
+@media (min-width: 1080px) {
+  .main {
+    width: 100%;
+  }
+  .main nav {
+    width: 100%;
+    position: relative;
+  }
+  .main nav .logo {
+    width: 12%;
+  }
+  .main nav .logo img {
+    width: 100%;
+  }
+  .main nav ul {
+    padding: 2em;
+    width: 40%;
+    gap: 5em;
+    justify-content: flex-end;
+    display: initial;
+    display: flex;
+  }
+  .main nav ul li {
+    list-style: none;
+    position: relative;
+  }
+  .main nav ul li ::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    height: 4px;
+    width: 100%;
+    background: #f44336;
+    border-radius: 50px;
+    transform: scaleX(0);
+    transition: transform 0.2s linear;
+  }
+  .main nav ul li :hover::after {
+    transform: scaleX(1);
+  }
+  .main nav ul li a {
+    display: inherit;
+    font-size: 1.2em;
+    position: relative;
+  }
+  .main nav .menu {
+    display: none;
+  }
+  .main nav .slidebar {
+    display: none;
+  }
+  .main .head {
+    top: 38%;
+    left: 5%;
+    right: 5%;
+  }
+  .main .head h1 {
+    font-size: 5em;
+  }
+  .main .head p {
+    font-size: 1.5em;
+  }
+  .main .head a {
+    padding: 1em 2em;
+    font-size: 1em;
+  }
+  .course {
+    width: 100%;
+  }
+  .course h1 {
+    font-size: 5em;
+  }
+  .course p {
+    font-size: 1.5em;
+  }
+  .course .course-item {
+    display: flex;
+    gap: 2em;
+    align-items: center;
+    justify-content: center;
+  }
+  .course .course-item .container {
+    padding: 2em;
+    width: 30%;
+    border-radius: 2em;
+  }
+  .course .course-item .container h1 {
+    font-size: 2.5em;
+  }
+  .course .course-item .container p {
+    font-size: 1.5em;
+    text-align: center;
+  }
+  .campus {
+    width: 100%;
+    padding: 4em;
+  }
+  .campus h1 {
+    font-size: 3em;
+  }
+  .campus p {
+    font-size: 1.5em;
+  }
+  .campus .campus-line {
+    width: 100%;
+    padding: 0 1em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    gap: 2em;
+  }
+  .campus .campus-line .campus-info {
+    width: 35%;
+  }
+  .campus .campus-line .campus-info .color {
+    width: 100%;
+    aspect-ratio: 1/0.67;
+  }
+  .faculity {
+    width: 100%;
+    padding: 4em;
+  }
+  .faculity h1 {
+    font-size: 4em;
+  }
+  .faculity p {
+    font-size: 1.5em;
+  }
+  .faculity .faculity-line {
+    width: 100%;
+    padding: 0 1em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    gap: 2em;
+  }
+  .faculity .faculity-line .faculity-info {
+    width: 30%;
+    aspect-ratio: 3/2;
+  }
+  .faculity .faculity-line .faculity-info .info h1 {
+    font-size: 2em;
+    margin-top: 1em;
+  }
+  .review h1 {
+    font-size: 3em;
+  }
+  .review p {
+    font-size: 1.5em;
+  }
+  .review .review-col {
+    display: flex;
+    justify-content: space-around;
+  }
+  .review .review-col .review-info {
+    width: 40%;
+    padding: 2em;
+    border-radius: 2em;
+    gap: 2em;
+  }
+  .review .review-col .review-info .image {
+    margin-top: 1em;
+    width: 60%;
+  }
+  .review .review-col .review-info .image-info {
+    padding-top: 1em;
+  }
+  .review .review-col .review-info .image-info p {
+    font-size: 1em;
+  }
+  .review .review-col .review-info .image-info h3 {
+    font-size: 2em;
+  }
+  .enroll .box {
+    padding: 2em 3em;
+  }
+  .enroll .box h1 {
+    font-size: 3em;
+    text-align: center;
+  }
+  .enroll .box a {
+    padding: 1em 5em;
+    font-size: 1.5em;
+  }
+  footer {
+    margin: 0;
+    padding: 0;
+  }
+  footer h1 {
+    font-size: 3em;
+  }
+  footer p {
+    margin-top: 1em;
+    font-size: 1.5em;
+  }
+}

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eduford</title>
+    <link rel="stylesheet" href="course.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body ontouchend = normal()  onkeyup= normal() onscroll= bgColor()>
+    <main>
+        <section class="main">
+            <nav>
+                <div class="logo">
+                    <img src="logo.png" alt="">
+                </div>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="course.html">Course</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+
+                <ul class="menu">
+                    <li onclick= showSidebar()><i class="fa-solid fa-bars"></i></li>
+                </ul>
+                <ul class="sidebar">
+                    <li onclick= hideSidebar()><i class="fa-solid fa-xmark"></i></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html#">About</a></li>
+                    <li><a href="course.html">Course</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="head">
+                <h1>Our Courses</h1>
+            </div>
+        </section>
+
+        <section class="course">
+            <h1>Courses We Offer</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+            <div class="course-item">
+                <div class="container">
+                    <h1>Intermediate</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat saepe adipisci beatae
+                        aspernatur culpa.</p>
+                </div>
+                <div class="container">
+                    <h1>Graducation</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat saepe adipisci beatae
+                        aspernatur culpa.</p>
+                </div>
+                <div class="container">
+                    <h1>Post Graducation</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat saepe adipisci beatae
+                        aspernatur culpa.</p>
+                </div>
+            </div>
+
+        </section>
+
+        <section class="faculity">
+            <h1>Our Facilities</h1>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam quis veniam et libero. Error libero
+                voluptatibus</p>
+            <div class="faculity-line">
+                <div class="faculity-info">
+                    <div class="faculity-pic">
+                        <img src="cafeteria.png" alt="">
+                        <div class="info">
+                            <h1>Tasty And Healthy Food</h1>
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faculity-info">
+                    <div class="faculity-pic">
+                        <img src="library.png" alt="">
+                        <div class="info">
+                            <h1>World Class Libaray</h1>
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faculity-info">
+                    <div class="faculity-pic">
+                        <img src="basketball.png" alt="">
+                        <div class="info">
+                            <h1>Large PlayGround</h1>
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        </main>
+        <footer>
+            <h1>About Us</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus optio necessitatibus rerum officia suscipit corporis libero aliquid quaerat harum, perspiciatis voluptatibus natus delectus ratione eos ipsum possimus reiciendis vel deleniti!</p>
+            <p>&copy; All the Right Of This Website Is Belong To
+                <br> <b>Niraj</b></p>
+        </footer>
+        <script>
+            function showSidebar(){
+                const sidebar = document.querySelector('.sidebar');
+                sidebar.style.display = 'flex';
+            }
+            function hideSidebar(){
+                const sidebar = document.querySelector('.sidebar');
+                sidebar.style.display = 'none';
+            }
+            function bgColor(){
+            const nav = document.querySelector('nav');
+            nav.style.backgroundColor = 'black';
+        }
+        function normal(){
+            const nav = document.querySelector('nav');
+            nav.style.backgroundColor = 'Transparent';
+        }
+        </script>
+</body>
+</html>

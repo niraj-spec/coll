@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eduford</title>
+    <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+
+<body ontouchend = normal() onkeyup= normal() onscroll= bgColor()>
+    <main>
+        <section class="main">
+            <nav>
+                <div class="logo">
+                    <img src="logo.png" alt="">
+                </div>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="course.html">Course</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+
+                <ul class="menu">
+                    <li onclick=showSidebar()><i class="fa-solid fa-bars"></i></li>
+                </ul>
+                <ul class="sidebar">
+                    <li onclick=hideSidebar()><i class="fa-solid fa-xmark"></i></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html#">About</a></li>
+                    <li><a href="course.html">Course</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="head">
+                <h1>Contact Us</h1>
+            </div>
+        </section>
+        <section class="contactus">
+            <div class="map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d235014.29918790405!2d72.41493012913726!3d23.020158084541748!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e848aba5bd449%3A0x4fcedd11614f6516!2sAhmedabad%2C%20Gujarat!5e0!3m2!1sen!2sin!4v1745078632970!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <div class="contact-detail">
+                <div class="contact">
+                <div class="contact-left">
+                    <i class="fa-solid fa-house"></i>
+                    <div class="left-info">
+                        <p>XYZ Road,ABC Building</p>
+                        <p>Ahmedabad,Gujrat,India</p>
+                    </div>
+                </div>
+                <div class="contact-left">
+                    <i class="fa-solid fa-phone"></i>
+                    <div class="left-info">
+                        <p> +9897198971</p>
+                        <p>Monday to Friday,10AM to 6PM. </p>
+                    </div>
+                </div>
+
+                <div class="contact-left">
+                    <i class="fa-solid fa-envelope"></i>
+                    <div class="left-info">
+                        <p>info@abc.com</p>
+                        <p>Email Us For Any Query</p>
+                    </div>
+                </div>
+            </div>
+                <form>
+                    <h3>Connect With Us</h3>
+                    <input type="text" placeholder="Enter Your Name" autocomplete="off">
+                    <input type="email" placeholder="Enter Your Email" required>
+                    <input type="text" placeholder="Enter Your Course">
+                    <textarea placeholder="Enquery Here"></textarea>
+                    <button type="submit"> Send Messages</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <h1>About Us</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus optio necessitatibus rerum officia suscipit corporis libero aliquid quaerat harum, perspiciatis voluptatibus natus delectus ratione eos ipsum possimus reiciendis vel deleniti!</p>
+        <p>&copy; All the Right Of This Website Is Belong To
+            <br> <b>Niraj</b></p>
+    </footer>
+    
+    <script>
+        function showSidebar() {
+            const sidebar = document.querySelector('.sidebar');
+            sidebar.style.display = 'flex';
+        }
+        function hideSidebar() {
+            const sidebar = document.querySelector('.sidebar');
+            sidebar.style.display = 'none';
+        }
+        function bgColor(){
+            const nav = document.querySelector('nav');
+            nav.style.backgroundColor = 'black';
+        }
+        function normal(){
+            const nav = document.querySelector('nav');
+            nav.style.backgroundColor = 'Transparent';
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,332 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    height: 100%;
+    width: 100%;
+}
+
+main {
+    width: 100%;
+}
+
+.main {
+    width: 100%;
+    height: 50vh;
+    color: white;
+    background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url(banner.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.main nav {
+    position :fixed;
+    padding-top: 1em;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.main nav .logo {
+    width: 50%;
+}
+
+.main nav .logo img {
+    width: 100%;
+    aspect-ratio: 1/0.2;
+    object-fit: cover;
+}
+
+.main nav ul {
+    display: none;
+}
+
+.main nav ul a {
+    text-decoration: none;
+    color: white;
+}
+.main nav .sidebar {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    display: none;
+    list-style: none;
+    top: 0%;
+    gap: 2em;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 2em;
+    right: 0%;
+    flex-direction: column;
+    background-color: rgba(255, 255, 255, 0.384);
+            backdrop-filter: blur(10px);
+  }
+  .main nav .sidebar a {
+    font-size: 2em;
+  }
+  .main nav .sidebar i {
+    font-size: 2em;
+  }
+  .main nav .menu {
+    display: initial;
+    position: fixed;
+    right: 4%;
+    list-style: none;
+  }
+  .main nav .menu i {
+    font-size: 2em;
+  }
+
+
+.main .head {
+    position: absolute;
+    bottom: 40%;
+    left: 30%;
+    text-align: center;
+    display: flex;
+    gap: 2rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.main .head h1 {
+    font-size: 1.5em;
+}
+.contactus{
+    padding: 2em;
+}
+.contactus .map{
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2em
+}
+
+
+.contactus .contact-detail {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    font-size: 1.5em;
+    align-items: center;
+    justify-content: center;
+}
+
+.contactus .contact-detail .contact{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    font-size: 1.5em;
+    align-items: center;
+    justify-content: center;
+}
+.contactus .contact-detail .contact .contact-left{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+    align-items: center;
+    justify-content: center;
+}
+
+.contactus .contact-detail .contact .contact-left .left-info{
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    gap: .5em;
+}
+
+.contactus .contact-detail .contact .contact-left .left-info p{
+    font-size: .5em;
+    opacity: .7;
+}
+
+
+
+.contactus  form {
+    width: 100%;
+    margin: 2em 0;
+    padding: 2em;
+    border: 2px solid black;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+
+.contactus form input {
+    padding: 1em;
+    border-radius: .3em;
+    background-color: #f0f0f0;
+    color: black;
+    border: none;
+    font-size: .8em;
+}
+
+.contactus form textarea {
+    padding: 1em;
+    border-radius: .3em;
+    background-color: #f0f0f0;
+    color: black;
+    border: none;
+    font-size: 1em;
+}
+
+.contactus form button {
+    padding: 1em;
+    background-color: black;
+    color: white;
+}
+
+button:active {
+    background-color: transparent;
+    color: #f44336;
+    border-color: #f44336;
+    scale: 1;
+}footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 2em;
+    padding: 2em;
+    padding-bottom: 2em;
+}
+
+footer p {
+    opacity: .7;
+}
+
+@media (min-width: 1080px) {
+    .main {
+        width: 100%;
+    }
+
+    .main nav {
+        width: 100%;
+        position: relative;
+    }
+
+    .main nav .logo {
+        width: 12%;
+        margin-left: 3em;
+    }
+
+    .main nav .logo img {
+        width: 100%;
+    }
+
+    .main nav ul {
+        padding: 2em;
+        width: 40%;
+        gap: 5em;
+        display: initial;
+        display: flex;
+        align-items: center;
+        gap: 1em;
+        justify-content: flex-end
+    }
+
+    .main nav ul li {
+        list-style: none;
+        position: relative;
+    }
+
+    .main nav ul li ::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -4px;
+        height: 4px;
+        width: 100%;
+        background: #f44336;
+        border-radius: 50px;
+        transform: scaleX(0);
+        transition: transform 0.2s linear;
+    }
+
+    .main nav ul li :hover::after {
+        transform: scaleX(1);
+    }
+
+    .main nav ul li a {
+        display: inherit;
+        font-size: 1.3em;
+    }
+    .main nav .menu {
+        display: none;
+      }
+      .main nav .slidebar {
+        display: none;
+      }
+
+    .main .head {
+        top: 50%;
+        left: 34%;
+    }
+
+    .main .head h1 {
+        font-size: 5em;
+    }
+    .contactus{
+        padding: 0 8em;
+    }
+    .contactus .contact-detail{
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-between;
+        justify-content: space-between;
+        align-items: flex-start;
+    }   
+
+    .contactus .map{
+        padding: 2em;
+        width: 100%;
+    }
+    .contactus .map iframe{
+        width: 100%;
+    }
+    .contactus .contact-detail form{
+        border: none;
+        width: 50%;
+    }
+    .contactus .contact-detail form input{
+        font-size: .5em;
+        padding: 1em 2em;
+    }
+
+    .contactus .contact-detail form textarea{
+        font-size: .7em;
+    }
+
+    .contactus .contact-detail .contact{
+        margin-top: 4em;
+    }
+
+    footer {
+        margin-top: 2em;
+        padding: 0 8em;
+        padding-bottom: 2em;
+      }
+      footer h1 {
+        font-size: 3em;
+      }
+      footer p {
+        opacity: .7;
+        font-size: 1em;
+      }
+}

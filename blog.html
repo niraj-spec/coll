@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eduford</title>
+    <link rel="stylesheet" href="blog.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+
+<body ontouchend = normal() onkeyup= normal() onscroll= bgColor()>
+    <main>
+        <section class="main">
+            <nav>
+                <div class="logo">
+                    <img src="logo.png" alt="">
+                </div>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="course.html">Course</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+
+                <ul class="menu">
+                    <li onclick= showSidebar()><i class="fa-solid fa-bars"></i></li>
+                </ul>
+                <ul class="sidebar">
+                    <li onclick= hideSidebar()><i class="fa-solid fa-xmark"></i></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html#">About</a></li>
+                    <li><a href="course.html">Course</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="head">
+                <h1>Our Certificate & Online Programs For 2023</h1>
+            </div>
+        </section>
+
+        <section class="blog">
+            <div class="blog-detail">
+                <div class="blog-idea">
+                    <div class="blog-img">
+                        <img src="certificate.jpg" alt="">
+                    </div>
+                    <div class="blog-info">
+                        <h3>Our Certificate & Online Programs For 2023</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente officia dolorum, dolor aliquam, necessitatibus saepe eos eveniet omnis nostrum, quaerat minima odio voluptates ad sit quo reprehenderit eaque blanditiis tenetur.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi accusamus, delectus minus voluptate asperiores numquam autem quam possimus incidunt minima totam corporis quod, odio quasi doloribus quo quia, voluptatem voluptatibus?
+                        Veniam commodi quisquam, placeat soluta officiis nisi quod laudantium vel distinctio voluptatibus aperiam iste at vero. Assumenda delectus quas, repudiandae, nostrum, dolores doloribus pariatur quia quidem cumque eos sint unde!</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic nemo deleniti vel ipsum optio fugit reprehenderit exercitationem repellat neque, minus, corrupti numquam beatae impedit quod nisi itaque earum. Distinctio, odit!</p>
+                    </div>
+                </div>
+                <div class="blog-side">
+                    <h3>Post Categories</h3>
+                    <div>
+                        <span>Business Analytics</span>
+                        <span>25</span>
+                    </div>
+                    <hr>
+                    <div>
+                        <span>Machine Learning</span>
+                        <span>15</span>
+                    </div>
+                    <hr>
+                    <div>
+                        <span>Data Science</span>
+                        <span>20</span>
+                    </div>
+                    <hr>
+                    <div>
+                        <span>Commerce</span>
+                        <span>50</span>
+                    </div>
+                    <hr>
+                    <div>
+                        <span>Information Technology</span>
+                        <span>15</span>
+                    </div>
+                    <hr>
+                </div>
+            </div>
+            <form>
+                <h3>Leave A Comment</h3>
+                <input type="text" placeholder="Enter Your Name" autocomplete="off">
+                <input type="email" placeholder="Enter Your Email" required>
+                <textarea placeholder="Leave your Comment Here"></textarea>
+                <button type="submit"> Post Comment</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <h1>About Us</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus optio necessitatibus rerum officia suscipit corporis libero aliquid quaerat harum, perspiciatis voluptatibus natus delectus ratione eos ipsum possimus reiciendis vel deleniti!</p>
+        <p>&copy; All the Right Of This Website Is Belong To
+            <br> <b>Niraj</b></p>
+    </footer>
+    <script>
+        function showSidebar(){
+            const sidebar = document.querySelector('.sidebar');
+            sidebar.style.display = 'flex';
+        }
+        function hideSidebar(){
+            const sidebar = document.querySelector('.sidebar');
+            sidebar.style.display = 'none';
+        }
+        function bgColor(){
+            const nav = document.querySelector('nav');
+            nav.style.backgroundColor = 'black';
+        }
+        function normal(){
+            const nav = document.querySelector('nav');
+            nav.style.backgroundColor = 'Transparent';
+        }
+    </script>
+</body>
+
+</html>

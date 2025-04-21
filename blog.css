@@ -1,0 +1,336 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    height: 100%;
+    width: 100%;
+}
+
+main {
+    width: 100%;
+}
+
+.main {
+    width: 100%;
+    height: 50vh;
+    color: white;
+    background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url(image2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.main nav {
+    padding-top: 1em;
+    width: 100%;
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.main nav .logo {
+    width: 50%;
+}
+
+.main nav .logo img {
+    width: 100%;
+    aspect-ratio: 1/0.2;
+    object-fit: cover;
+}
+
+.main nav ul {
+    display: none;
+}
+
+.main nav ul a {
+    text-decoration: none;
+    color: white;
+}
+
+.main nav .sidebar {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    display: none;
+    list-style: none;
+    top: 0%;
+    gap: 2em;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 2em;
+    right: 0%;
+    flex-direction: column;
+    background-color: rgba(255, 255, 255, 0.384);
+    backdrop-filter: blur(10px);
+}
+
+.main nav .sidebar a {
+    font-size: 2em;
+}
+
+.main nav .sidebar i {
+    font-size: 2em;
+}
+
+.main nav .menu {
+    display: initial;
+    position: fixed;
+    right: 4%;
+    list-style: none;
+}
+
+.main nav .menu i {
+    font-size: 2em;
+}
+
+
+.main .head {
+    position: absolute;
+    bottom: 40%;
+    left: 5%;
+    right: 2%;
+    text-align: center;
+    display: flex;
+    gap: 2rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.main .head h1 {
+    font-size: 1.5em;
+}
+
+.blog {
+    width: 100%;
+    padding: 2em;
+}
+
+.blog form {
+    width: 90%;
+    margin: 2em 0;
+    padding: 2em;
+    border: 2px solid black;
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+}
+
+.blog form input {
+    padding: 1em;
+    border-radius: .3em;
+    background-color: #f0f0f0;
+    color: black;
+    border: none;
+    font-size: 1em;
+}
+
+.blog form textarea {
+    padding: 1em;
+    border-radius: .3em;
+    background-color: #f0f0f0;
+    color: black;
+    border: none;
+    font-size: 1.5em;
+}
+
+.blog form button {
+    padding: 1em;
+    background-color: black;
+    color: white;
+}
+
+button:active {
+    background-color: transparent;
+    color: #f44336;
+    border-color: #f44336;
+    scale: 1;
+}
+
+.blog .blog-detail {
+    width: 100%;
+    display: flex;
+    gap: 1em;
+}
+
+.blog .blog-detail .blog-idea {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+}
+
+.blog .blog-detail .blog-idea .blog-img {
+    width: 100%;
+}
+
+.blog .blog-detail .blog-idea .blog-img img {
+    width: 100%;
+}
+
+.blog .blog-detail .blog-idea .blog-info h3 {
+    font-size: 1.6em;
+}
+
+.blog .blog-detail .blog-idea .blog-info p {
+    opacity: .7;
+    font-size: 1.2em;
+    padding-top: 2em;
+    text-align: left;
+}
+
+.blog .blog-detail .blog-side {
+    width: 40%;
+}
+
+.blog .blog-detail .blog-side h3 {
+    text-align: center;
+    background-color: #f44336;
+    color: white;
+    padding: .5em;
+}
+
+.blog .blog-detail .blog-side div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.blog .blog-detail .blog-side div span {
+    padding: 1em;
+    font-size: 1em;
+    opacity: .9;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 2em;
+    padding: 2em;
+    padding-bottom: 2em;
+}
+
+footer p {
+    opacity: .7;
+}
+
+
+
+@media (min-width: 1080px) {
+    .main {
+        width: 100%;
+    }
+
+    .main nav {
+        position: relative;
+        width: 100%
+    }
+
+    .main nav .logo {
+        width: 12%;
+        margin-left: 3em;
+    }
+
+    .main nav .logo img {
+        width: 100%;
+    }
+
+    .main nav ul {
+        padding: 2em;
+        width: 40%;
+        gap: 5em;
+        display: initial;
+        display: flex;
+        align-items: center;
+        gap: 1em;
+        justify-content: flex-end
+    }
+
+    .main nav ul li {
+        list-style: none;
+        position: relative;
+    }
+
+    .main nav ul li ::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -4px;
+        height: 4px;
+        width: 100%;
+        background: #f44336;
+        border-radius: 50px;
+        transform: scaleX(0);
+        transition: transform 0.2s linear;
+    }
+
+    .main nav ul li :hover::after {
+        transform: scaleX(1);
+    }
+
+    .main nav ul li a {
+        display: inherit;
+        font-size: 1.3em;
+    }
+
+    .main nav .menu {
+        display: none;
+    }
+
+    .main nav .slidebar {
+        display: none;
+    }
+
+    .main .head {
+        top: 60%;
+        left: 3%;
+        right: 3%;
+    }
+
+    .main .head h1 {
+        font-size: 5em;
+    }
+
+    .blog {
+        padding: 4em 6em;
+    }
+
+    .blog .blog-detail {
+        padding: 0 6em;
+        gap: 2em;
+    }
+
+    .blog .blog-detail .blog-idea .blog-info p {
+        opacity: .6;
+    }
+
+    .blog .blog-detail .blog-side div {
+        justify-content: space-between;
+    }
+
+    footer {
+        margin-top: 2em;
+        padding: 0 8em;
+        padding-bottom: 2em;
+    }
+
+    footer h1 {
+        font-size: 3em;
+    }
+
+    footer p {
+        opacity: .7;
+        font-size: 1em;
+    }
+}
